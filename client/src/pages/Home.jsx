@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Sparkles, Image as ImageIcon, Users, Check, Star } from 'lucide-react';
+import { Image as ImageIcon, Users, Check, Star } from 'lucide-react';
 
 const Home = () => {
   return (
