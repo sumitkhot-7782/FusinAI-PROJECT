@@ -18,8 +18,10 @@ const Signup = () => {
     try {
       setLoading(true);
       setError('');
-      // Send data to our Node server
-      await axios.post('http://localhost:5000/api/auth/signup', formData);
+      
+      // ✅ CHANGED: Now uses the environment variable instead of localhost!
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, formData);
+      
       // If successful, redirect to login page
       navigate('/login');
     } catch (err) {
