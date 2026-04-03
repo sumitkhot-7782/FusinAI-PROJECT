@@ -30,7 +30,8 @@ const BGRemove = () => {
       setLoading(true);
       setError('');
       
-      const response = await axios.post('http://localhost:5000/api/ai/remove-bg', formData, {
+      // ✅ CHANGED: Now uses the environment variable instead of localhost!
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/ai/remove-bg`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
