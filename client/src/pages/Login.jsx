@@ -19,8 +19,8 @@ const Login = () => {
       setLoading(true);
       setError('');
       
-      // Send login request to server
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      // ✅ CHANGED: Now uses the environment variable instead of localhost!
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, formData);
       
       // Save the JWT token to localStorage so the user stays logged in
       localStorage.setItem('token', response.data.token);
