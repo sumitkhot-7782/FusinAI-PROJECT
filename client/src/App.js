@@ -48,7 +48,8 @@ function App() {
                 </ProtectedRoute>
               } 
             />
-            
+
+              
             <Route 
               path="/remove-bg" 
               element={
